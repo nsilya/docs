@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ТРИЗ за 20 минут: 40 приёмов</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#faf9f6;--fg:#1d1d1b;--mu:#6b6b66;--card:#fff;--bd:#e4e2dc;--g0:#3b6fd4;--g1:#d4783b;--g2:#2f9e6e;--g3:#8a5cc7;--g4:#c9486a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16171a;--fg:#ececea;--mu:#9a9a94;--card:#1f2024;--bd:#33343a;--g0:#6f9bf0;--g1:#f09a62;--g2:#55c796;--g3:#b48cf0;--g4:#f07a98}}
+:root[data-theme="dark"]{--bg:#16171a;--fg:#ececea;--mu:#9a9a94;--card:#1f2024;--bd:#33343a;--g0:#6f9bf0;--g1:#f09a62;--g2:#55c796;--g3:#b48cf0;--g4:#f07a98}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.7rem;margin:.2em 0}h2{font-size:1.15rem;margin:1.6em 0 .5em}
+.sub{color:var(--mu);margin:0 0 1em}
+svg{display:block;width:100%;height:auto}
+.box{fill:var(--card);stroke:var(--bd);stroke-width:1.5}
+.tx{fill:var(--fg);font:600 14px system-ui,sans-serif;text-anchor:middle}
+.ar{stroke:var(--mu);stroke-width:1.5;fill:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chips button{border:1.5px solid var(--bd);background:var(--card);color:var(--fg);border-radius:99px;padding:5px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.chips button.on{border-color:var(--fg);font-weight:600}
+.tile circle{stroke-width:0;cursor:pointer}.tile text{fill:#fff;font:600 13px system-ui,sans-serif;text-anchor:middle;pointer-events:none}
+.tile.off{opacity:.15}
+.f0{fill:var(--g0)}.f1{fill:var(--g1)}.f2{fill:var(--g2)}.f3{fill:var(--g3)}.f4{fill:var(--g4)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.c{background:var(--card);border:1px solid var(--bd);border-left:5px solid;border-radius:10px;padding:12px 14px;position:relative}
+.c.g0{border-left-color:var(--g0)}.c.g1{border-left-color:var(--g1)}.c.g2{border-left-color:var(--g2)}.c.g3{border-left-color:var(--g3)}.c.g4{border-left-color:var(--g4)}
+.c h3{margin:0 0 4px;font-size:1rem}.c .n{color:var(--mu);font-weight:600;margin-right:6px}
+.c p{margin:3px 0;font-size:.9rem}.c .s{color:var(--mu)}
+.c.hide{display:none}.c.fl{outline:3px solid var(--fg)}
+ol{padding-left:1.3em}li{margin:2px 0}
+.q{border-left:4px solid var(--g0);padding:6px 12px;background:var(--card);border-radius:0 8px 8px 0}
+</style></head>
+<body><main>
+<h1>ТРИЗ за 20 минут</h1>
+<p class="sub">Не учи 40 приёмов наизусть — научись находить противоречие. Потом приём подберётся сам.</p>
+
+<svg viewBox="0 0 480 150" role="img" aria-label="Цепочка ТРИЗ: проблема, противоречие, ИКР, ресурсы, приём, решение">
+<defs><marker id="m" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--mu)"/></marker></defs>
+<g class="box"><rect x="10" y="10" width="130" height="44" rx="8"/><rect x="175" y="10" width="130" height="44" rx="8"/><rect x="340" y="10" width="130" height="44" rx="8"/>
+<rect x="10" y="96" width="130" height="44" rx="8"/><rect x="175" y="96" width="130" height="44" rx="8"/><rect x="340" y="96" width="130" height="44" rx="8"/></g>
+<g class="tx"><text x="75" y="37">Проблема</text><text x="240" y="37">Противоречие</text><text x="405" y="37">ИКР</text>
+<text x="75" y="123">Ресурсы</text><text x="240" y="123">Приём</text><text x="405" y="123">Решение</text></g>
+<g class="ar" marker-end="url(#m)"><path d="M140 32H173"/><path d="M305 32H338"/><path d="M405 54V75H75V94"/><path d="M140 118H173"/><path d="M305 118H338"/></g>
+</svg>
+<p class="sub" style="margin-top:8px"><b>Пример.</b> «Работаю медленно» → не «заставь себя», а: как поднять <b>скорость</b>, не поднимая <b>ошибки</b>? Ответы — дробление (1), предварительное действие (10), шаблоны и автоматизация (25, 28), обратная связь (23).</p>
+
+<h2>Карта приёмов</h2>
+<div class="chips" id="chips"></div>
+<svg id="map" viewBox="0 0 352 220" role="img" aria-label="Карта 40 приёмов"></svg>
+
+<h2>40 приёмов: быт и работа</h2>
+<div class="grid" id="grid"></div>
+
+<h2>7 вопросов перед выбором приёма</h2>
+<ol><li>Что я хочу улучшить?</li><li>Что при этом ухудшается?</li><li>В чём противоречие?</li><li>Как выглядит идеальный результат?</li><li>Какие ресурсы уже есть?</li><li>Можно ли разделить конфликтующие свойства (по частям, времени, условиям)?</li><li>Может ли система сделать это сама?</li></ol>
+<p class="q">Не «как решить проблему?», а «как получить нужное свойство, не получив нежелательное?»</p>
+</main>
+<script>
+var G=["Структура · 1–7","Заранее · 8–12","Режим действия · 13–23","Ресурсы и замены · 24–34","Физика и среда · 35–40"];
+var D=[
+"Дробление|Разбить на независимые части|Уборка по одной зоне в день|Проверка DQ — отдельные проверки: полнота, уникальность, валидность",
+"Вынесение|Убрать мешающую часть, оставить нужную|Шумный блок кондиционера — на улице|Тяжёлую агрегацию — из витрины в отдельный ночной этап",
+"Местное качество|Разным частям — разные свойства|Ручка кастрюли холодная, дно горячее|Строгий DQ на ключах и суммах, мягкий — на комментариях",
+"Асимметрия|Отказаться от симметрии|Мышь, выточенная под руку|Отчёт с разной детализацией для CFO и для аналитика",
+"Объединение|Соединить однородное в пространстве или времени|Одна стирка вместо трёх|Один проход по таблице — сразу несколько агрегатов (GROUPING SETS)",
+"Универсальность|Один объект — несколько функций|Диван-кровать|Журнал загрузок — он же источник метрик SLA и DQ",
+"Матрёшка|Вложить одно в другое|Набор кастрюль друг в друге|Конфиг пайплайна включает блоки настроек каждой проверки",
+"Антивес|Скомпенсировать нагрузку встречной силой|Гелиевый шар поднимает подарок|Нагрузку отчётов компенсировать read-репликой",
+"Предварительное антидействие|Заранее создать противодействие вреду|Крем от загара — до пляжа|Точка отката и бэкап до миграции",
+"Предварительное действие|Сделать часть работы заранее|Овощи нарезаны с вечера|Форматы приведены к единому виду в staging до основной загрузки",
+"Подушка заранее|Страховка на случай отказа|Запасной ключ у соседа|Constraint на входе, плохие строки — в quarantine",
+"Эквипотенциальность|Не поднимать и не опускать — работать на одном уровне|Нужное лежит на уровне рук, не на антресоли|Считать там, где лежат данные (pushdown), а не тащить их в приложение",
+"Наоборот|Сделать обратное привычному|Беговая дорожка: движется полотно, не человек|Не искать плохие записи, а описать допустимые и пропускать только их",
+"Сфероидальность|Скольжение заменить качением, прямое — круговым|Чемодан на колёсах|Вместо ручных запусков по шагам — DAG с ретраями",
+"Динамичность|Сделать изменяемым|Регулируемый стул|Правила и пороги DQ — в таблице-конфиге, не в коде",
+"Частичное или избыточное действие|Не выходит идеально — чуть меньше или больше, потом подправить|Посолить меньше и досолить|Грубая проверка на выборке, затем полная",
+"Другое измерение|Сменить направление или уровень|Полки до потолка вместо шкафа вширь|Добавить сегменты кластера, а не наращивать один сервер",
+"Механические колебания|Использовать ритм и вибрацию|Вибрация стряхивает пыль|Sensor в Airflow пульсирует: проверяет, появился ли файл",
+"Периодическое действие|Вместо постоянного — импульсное|Отопление по расписанию|Инкремент раз в час вместо вечного стриминга",
+"Непрерывность полезного действия|Убрать простои|Стирка идёт, пока готовишь|Пока грузится ODS, независимые витрины уже считаются",
+"Проскок|Пройти вредный этап на большой скорости|Пластырь срывают одним движением|Swap партиции вместо долгого UPDATE с блокировкой",
+"Обратить вред в пользу|Нежелательное сделать ресурсом|Тепло посудомойки греет кухню|Ошибки загрузки — метрика качества источника",
+"Обратная связь|Результат влияет на следующее действие|Термостат|DQ FAIL создаёт инцидент и стопорит downstream",
+"Посредник|Добавить промежуточный элемент|Прихватка между рукой и горячим|Staging или очередь между системами",
+"Самообслуживание|Система обслуживает себя|Робот-пылесос сам едет на зарядку|Пайплайн сам запускает DQ, пишет в quarantine и журнал",
+"Копирование|Работать с копией|Скан паспорта вместо оригинала|Миграцию репетировать на копии или синтетике",
+"Дешёвая недолговечность|Дешёвое одноразовое вместо дорогого вечного|Одноразовая посуда на выезде|Временный стенд вместо эксперимента на prod",
+"Замена механики|Ручное заменить информационным|Электронный замок вместо ключа|Ручная сверка в Excel → SQL-проверка",
+"Пневмо- и гидроконструкции|Поток вместо твёрдого|Надувной матрас|CDC или очередь вместо файлов, переданных вручную",
+"Гибкие оболочки|Жёсткое заменить гибким|Пакет вместо коробки|View поверх таблиц: схема меняется, потребители не ломаются",
+"Пористые материалы|Использовать пустоты|Губка впитывает воду|Простаивающие ночные ресурсы кластера под тяжёлые расчёты",
+"Изменение окраски|Сделать проблему заметной маркером|Цветные стикеры на зарядках|Severity HIGH / MEDIUM / LOW, светофор в Superset",
+"Однородность|Сделать объекты совместимыми|Одинаковые батарейки в приборах|Единые типы ключей и форматы дат во всех слоях",
+"Отбрасывание и регенерация|Отработанное исчезает, нужное восстанавливается|Капсула кофемашины|Temp-таблицы удаляются, партиции уходят по TTL",
+"Физико-химические параметры|Изменить состояние или формат|Заморозить борщ впрок|Row → columnar (AOCO), сжатие",
+"Фазовые переходы|Использовать смену состояния|Лёд охлаждает напиток, пока тает|Статусы NEW → PROCESSING → VALIDATED → FAILED управляют логикой",
+"Тепловое расширение|Использовать само изменяющийся параметр как сигнал|Биметаллическая пластина в утюге|Рост времени загрузки сам запускает алерт",
+"Сильные окислители|Усилить интенсивность воздействия|Отбеливатель на въевшееся пятно|Не латать в сотый раз, а пересоздать таблицу или VACUUM FULL",
+"Инертная среда|Среда, где вред не происходит|Вакуумная упаковка|Песочница без доступа к prod",
+"Композитные материалы|Сочетать разные свойства|Фанера прочнее одной доски|Человек решает, автоматика делает рутинную проверку"];
+function gr(n){return n<8?0:n<13?1:n<24?2:n<35?3:4}
+var grid=document.getElementById("grid"),map=document.getElementById("map"),chips=document.getElementById("chips"),cur=-1;
+var h="",m="";
+D.forEach(function(r,i){var n=i+1,g=gr(n),p=r.split("|");
+h+='<article class="c g'+g+'" id="p'+n+'" data-g="'+g+'"><h3><span class="n">'+n+'</span>'+p[0]+'</h3><p class="s">'+p[1]+'</p><p>🏠 '+p[2]+'</p><p>💼 '+p[3]+'</p></article>';
+m+='<g class="tile" data-g="'+g+'" data-n="'+n+'"><circle class="f'+g+'" cx="'+(22+(i%8)*44)+'" cy="'+(22+Math.floor(i/8)*44)+'" r="19"><title>'+p[0]+'</title></circle><text x="'+(22+(i%8)*44)+'" y="'+(27+Math.floor(i/8)*44)+'">'+n+'</text></g>'});
+grid.innerHTML=h;map.innerHTML=m;
+function setF(g){cur=g;
+[].forEach.call(document.querySelectorAll(".c"),function(e){e.classList.toggle("hide",g>=0&&+e.dataset.g!==g)});
+[].forEach.call(document.querySelectorAll(".tile"),function(e){e.classList.toggle("off",g>=0&&+e.dataset.g!==g)});
+[].forEach.call(chips.children,function(b){b.classList.toggle("on",+b.dataset.g===g)})}
+chips.innerHTML='<button data-g="-1" class="on">Все</button>'+G.map(function(t,i){return '<button data-g="'+i+'" style="border-left:5px solid var(--g'+i+')">'+t+'</button>'}).join("");
+chips.onclick=function(e){if(e.target.dataset.g!==undefined)setF(+e.target.dataset.g)};
+map.onclick=function(e){var t=e.target.closest(".tile");if(!t)return;if(cur>=0&&+t.dataset.g!==cur)setF(-1);
+var c=document.getElementById("p"+t.dataset.n);c.scrollIntoView({behavior:"smooth",block:"center"});c.classList.add("fl");setTimeout(function(){c.classList.remove("fl")},1400)};
+</script>
+</body></html>
